@@ -8,13 +8,9 @@ On the same engine a Nginx is deployed without port exposition.
 On a Kind cluster, the pod containing the Wireguard sidecar is run, this pod can access the Nginx that is not exposed using the VPN connection
 
 Why Wireguard : 
+WireGuard is a very simple but fast open source virtual private network (VPN) solution that took the industry by storm. Its code is only about 4,000 lines compared to over 70,000 for OpenVPN, which makes it much easier to audit, and has a relatively small attack surface. Since its incorporation into the linux kernel with version 5.6 in early 2020, its popularity exploded especially in the homelab space.
 
-TLDR : Step to run the example
-1. Run the server with './wireguard-server.sh'
-2. Run the local nginx 'docker run  -d nginx'
-3. Run the kind cluster 'kind create cluster --config kind-conf.yaml --name wireguard'
-4. 
- 
+[Wireguard](https://www.linuxserver.io/blog/routing-docker-host-and-container-traffic-through-wireguard)
 
 ## Setup Wireguard server and local Nginx
 
